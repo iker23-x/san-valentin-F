@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #c0392b;
+        }
+        .heart {
+            color: #e74c3c;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>¿Quieres ser mi San Valentín?</h1>
+        <div id="pregunta">
+            <button class="button" onclick="mostrarMensaje('si')">¡Sí!</button>
+            <button class="button" onclick="mostrarMensaje('no')">No</button>
+        </div>
+        <div id="mensaje-si" class="hidden">
+            <p>
+                Hola mi amor, jamás dejaré que seas espectadora. Recuerda que tu novio te ama mucho, mi princesa. 
+                Espero que te guste, bb. Te amo mucho, muak ❤️ y gatias por decir que ti
+            </p>
+        </div>
+        <div id="mensaje-no" class="hidden">
+            <p>¡Ay, por favor! 😢 ¿Segura que no quieres ser mi San Valentín?</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensaje(respuesta) {
+            // Ocultar la pregunta
+            document.getElementById('pregunta').style.display = 'none';
+
+            // Mostrar el mensaje correspondiente
+            if (respuesta === 'si') {
+                document.getElementById('mensaje-si').style.display = 'block';
+            } else {
+                document.getElementById('mensaje-no').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
